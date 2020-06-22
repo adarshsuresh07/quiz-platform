@@ -11,26 +11,18 @@ a {
 
 .jumbotron{
     background-color:black;
-    overflow-y: scroll;
-    position: fixed;
-    height: 90vh;
-    left: 20vw;
-    min-width: 60vw;
-    /* width: 80vw; */
-    margin-right: 20vw;
-    /* overflow-y: scroll; */
+    position: relative;
+    /* height: 90vh; */
+    overflow: hidden;
 }
 /* sidebar in dashboard */
 .sidebar{
-  padding-top: 5vw;
+  padding-top: 10vw;
   background-color: rgb(34, 33, 33);
   overflow: hidden;
-  /* width: 20vw; */
   width: fit-content;
   min-width: 20vw;
-	position: absolute; 
-	left: 0;
-	scroll-behavior: smooth;
+	position: fixed; 
   color: white;
 }
 .profile{
@@ -58,31 +50,46 @@ a {
 .profile-details h3{
   font-size: 14px;
 }
+.profile-details-edit {
+  padding-bottom: 2vw;
+  text-align: left;
+}
+.profile-details-edit h2{
+  font-size: 12px;
+}
+.profile-details-edit h3{
+  font-size: 14px;
+}
 /* sidebar in dashboard */
 
 /* desktop */
-@media only screen and (min-width: 601px ) {
+@media only screen and (min-width: 768px ) {
   .sidebar{
   height: 100vh;
+  }
+  .overlay{
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  .profile-details input{
+    width: 18vw;
+  }
+  .profile-details-edit input{
+    width: 18vw;
   }
 }
 /* desktop */
 /* code for mobile */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
   .jumbotron{
     position: relative;
-    height: max-content;
-    left: 10vw;
-    width: 80vw;
-    margin: 0vw;
-    padding-left: 10vw;
-    overflow: none;
+    height: fit-content;
   }
   .sidebar{
     align-items: center;
     padding-top: 0vw;
-    background-color:#44bdd9;
-    padding: 10vw;
+    background-color:#08a7ca;
+    padding: 5vw;
     width: 100%;
     position: relative; 
     color: white;
@@ -101,7 +108,6 @@ a {
   }
   body{
     overflow-y: scroll;
-    /* overflow-x: scroll; */
   }
 }
 /* code for mobile */

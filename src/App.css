@@ -32,3 +32,8 @@
   border-radius: 10px;
   text-underline-position: none;
 }
+.footer{
+  height: 10vh;
+  bottom: 0;
+  position: absolute;
+}
