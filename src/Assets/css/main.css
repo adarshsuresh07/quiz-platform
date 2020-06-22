@@ -15,7 +15,8 @@ a {
     position: fixed;
     height: 90vh;
     left: 20vw;
-    width: 80vw;
+    min-width: 60vw;
+    /* width: 80vw; */
     margin-right: 20vw;
     /* overflow-y: scroll; */
 }
@@ -24,35 +25,90 @@ a {
   padding-top: 5vw;
   background-color: rgb(34, 33, 33);
   overflow: hidden;
-  width: 20vw;
-  height: 100vh;
+  /* width: 20vw; */
+  width: fit-content;
+  min-width: 20vw;
 	position: absolute; 
 	left: 0;
 	scroll-behavior: smooth;
   color: white;
 }
 .profile{
-  height: 80vh;
-  margin: 1vw;
+  margin: 10px;
   padding: 10px;
+  align-items: center;
 
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
   background-color: rgb(34, 33, 33);
 }
 .Profile-pic {
-  height: 10vw;
-  /* border: 2px solid whitesmoke; */
+  height: 5vw;
+  width: 5vw;
   pointer-events: none;
-  /* border-radius: 10px; */
 }
 .profile-details {
-  padding-top: 5vw;
-
-  border: 2px solid whitesmoke;
   padding-bottom: 2vw;
   pointer-events: none;
-  border-radius: 10px;
+  text-align: left;
+}
+.profile-details h2{
+  font-size: 12px;
+}
+.profile-details h3{
+  font-size: 14px;
 }
 /* sidebar in dashboard */
+
+/* desktop */
+@media only screen and (min-width: 601px ) {
+  .sidebar{
+  height: 100vh;
+  }
+}
+/* desktop */
+/* code for mobile */
+@media only screen and (max-width: 600px) {
+  .jumbotron{
+    position: relative;
+    height: max-content;
+    left: 10vw;
+    width: 80vw;
+    margin: 0vw;
+    padding-left: 10vw;
+    overflow: none;
+  }
+  .sidebar{
+    align-items: center;
+    padding-top: 0vw;
+    background-color:#44bdd9;
+    padding: 10vw;
+    width: 100%;
+    position: relative; 
+    color: white;
+
+  }
+  .profile{
+    width: 80vw;
+  }
+  .Profile-pic{
+    height: 15vh;
+    width: 15vh;
+    border-radius: 15px;
+  }
+  .profile-details{
+    color: white;
+  }
+  body{
+    overflow-y: scroll;
+    /* overflow-x: scroll; */
+  }
+}
+/* code for mobile */
+
+
+
+
 
 /* Table */
 #scores {
@@ -76,39 +132,3 @@ a {
   color: white;
 }
 /* Table */
-
-/* not displaying profile in navbar for desktop */
-@media only screen and (min-width: 601px ) {
-  .navbar #profile{
-    display: none;
-  }
-}
-/* not displaying profile in navbar for desktop */
-/* code for mobile */
-@media only screen and (max-width: 600px) {
-  .sidebar {
-    display: none;
-  }
-  .jumbotron{
-    position: relative;
-    width: 90vw;
-    left: 0vw;
-    margin: 5vw;
-    overflow: none;
-  }
- .overlay{
-   overflow-y:scroll;
-  }
-
-  .profile{
-    width: 100vw;
-    height: 100vh;
-  }
-  .Profile-pic{
-    height: 20vh;
-  }
-  .profile-details{
-    color: white;
-  }
-}
-/* code for mobile */
