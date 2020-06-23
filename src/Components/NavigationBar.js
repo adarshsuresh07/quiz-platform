@@ -9,11 +9,11 @@ export default class NavigationBar extends React.Component {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="#test">Test</Nav.Link>
+                        <Nav.Link href="/dashboard" >Dashboard</Nav.Link>
                     </Nav>
-                    <Nav>
+                    {/* <Nav>
                         <Nav.Link href="#test">Test</Nav.Link>
-                    </Nav>
+                    </Nav> */}
                 </Navbar.Collapse>
             </Navbar>
         );

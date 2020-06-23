@@ -6,7 +6,7 @@ import Landing from "./Components/Landing/Landing"
 import Dashboard from "./Components/Dashboard/Dashboard"
 // import "./App.css"
 import 'bootstrap/dist/css/bootstrap.css';
-import Navbar from './Components/Navbar';
+import NavigationBar from './Components/NavigationBar';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 // function App() {
@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <Navbar /> */}
+        <NavigationBar />
         <BrowserRouter>
           <Switch>
             <PublicRoute component={Landing} path="/" exact />

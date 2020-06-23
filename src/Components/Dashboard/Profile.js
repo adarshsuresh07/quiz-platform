@@ -13,17 +13,24 @@ class Profile extends React.Component{
         this.setState({
             edit : !this.state.edit
         });
+
+        this.log();
     }
-    handleSubmit(event){
+    handleSubmit(event) {
         if(this._inputEmail.value !== '' && this._inputName.value !== ''){
             alert("Are You Sure?");
             this.setState({
-                profileval : {name:this._inputName.value !== this.state.profileval.name?this._inputName.value:this.state.profileval.name,email:this._inputEmail.value!==this.state.profileval.email?this._inputEmail.value:this.state.profileval.email,image:this.state.profileval.image}
+                profileval: { name: this._inputName.value !== this.state.profileval.name ? this._inputName.value : this.state.profileval.name, email: this._inputEmail.value !== this.state.profileval.email ? this._inputEmail.value : this.state.profileval.email, image: this.state.profileval.image }
             });
+
+        this.changeEdit();
+
+        console.log(this.state);
         }
-            
+        
         event.preventDefault();
-        this.log();
+        console.log("ok");
+        
     }
     log(){
         console.log(this.state.profileval);
@@ -33,7 +40,7 @@ class Profile extends React.Component{
         
         return (
         
-        <div className="profile center">
+        <div className="profile">
             <img src={this.state.profileval.image} className="Profile-pic" alt="logo" />
             <a onClick={this.changeEdit}><img src={this.state.profileval.image} className="Profile-pic" alt="logo" /></a>
             <br/><br/>
@@ -43,7 +50,7 @@ class Profile extends React.Component{
             <form onSubmit={this.handleSubmit} id="myForm" className="form" >
                 {/* onChange={this.handleChange} */}
                 <h2>Name:</h2>
-                <input type="text" ref={(a) => this._inputName = a}  defaultValue={this.state.profileval.name} placeholder={this.state.profileval.name} />
+                <input type="text" ref={(a) => this._inputName = a}  defaultValue='' placeholder={this.state.profileval.name} />
                 <br/><br/>
                 <h2>Email:</h2>
                 <input type="text" ref={(a) => this._inputEmail = a} defaultValue={this.state.profileval.email} /><br/><br/>
