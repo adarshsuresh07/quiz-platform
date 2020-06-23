@@ -5,30 +5,8 @@
   background-color: #282c34;
 }
 
-.navbar {
-  overflow: hidden;
-  background-color: black;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  /* width: 110vw; */
+.footer{
   height: 10vh;
-  align-items: flex-start;
-}
-
-/* Links inside the navbar */
-.navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: right;
-  padding: 5px 20px 5px 20px;
-  text-decoration: none;
-}
-
-/* Change background on mouse-over */
-.navbar a:hover {
-  background: rgb(9, 120, 184);
-  color: black;
-  border-radius: 10px;
-  text-underline-position: none;
+  bottom: 0;
+  position: absolute;
 }
